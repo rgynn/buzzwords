@@ -188,34 +188,42 @@ var suffixes = []string{
 	"of things",
 }
 
+// RandomAdjective returns a random buzzword adjective
+func RandomAdjective() string {
+	return adjectives[rand.Intn(len(adjectives))]
+}
+
+// RandomNoun returns a random buzzword noun
+func RandomNoun() string {
+	return nouns[rand.Intn(len(nouns))]
+}
+
+// RandomVerb returns a random buzzword verb
+func RandomVerb() string {
+	return verbs[rand.Intn(len(verbs))]
+}
+
+// RandomSuffix returns a random buzzword suffix
+func RandomSuffix() string {
+	return suffixes[rand.Intn(len(suffixes))]
+}
+
 // BuzzWords returns a sentence with adjective and noun
 func BuzzWords() string {
-	adjective := adjectives[rand.Intn(len(adjectives))]
-	noun := nouns[rand.Intn(len(nouns))]
-	return fmt.Sprintf("%v %v", adjective, noun)
+	return fmt.Sprintf("%v %v", RandomAdjective(), RandomNoun())
 }
 
 // WithSuffix returns a sentence with adjective, noun and suffix
 func WithSuffix() string {
-	adjective := adjectives[rand.Intn(len(adjectives))]
-	noun := nouns[rand.Intn(len(nouns))]
-	suffix := suffixes[rand.Intn(len(suffixes))]
-	return fmt.Sprintf("%v %v %v", adjective, noun, suffix)
+	return fmt.Sprintf("%v %v %v", RandomAdjective(), RandomNoun(), RandomSuffix())
 }
 
 // WithVerb returns a sentence with a verb, adjective and noun
 func WithVerb() string {
-	verb := verbs[rand.Intn(len(verbs))]
-	adjective := adjectives[rand.Intn(len(adjectives))]
-	noun := nouns[rand.Intn(len(nouns))]
-	return fmt.Sprintf("%v %v %v", verb, adjective, noun)
+	return fmt.Sprintf("%v %v %v", RandomVerb(), RandomAdjective(), RandomNoun())
 }
 
 // WithVerbAndSuffix returns a sentence with a verb, adjective, noun and suffix
 func WithVerbAndSuffix() string {
-	verb := verbs[rand.Intn(len(verbs))]
-	adjective := adjectives[rand.Intn(len(adjectives))]
-	noun := nouns[rand.Intn(len(nouns))]
-	suffix := suffixes[rand.Intn(len(suffixes))]
-	return fmt.Sprintf("%v %v %v %v", verb, adjective, noun, suffix)
+	return fmt.Sprintf("%v %v %v %v", RandomVerb(), RandomAdjective(), RandomNoun(), RandomSuffix())
 }
