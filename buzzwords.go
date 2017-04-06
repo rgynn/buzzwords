@@ -44,6 +44,7 @@ var verbs = []string{
 
 var adjectives = []string{
 	"agile",
+	"aiops",
 	"all flash",
 	"auto-scaling",
 	"automation centric",
