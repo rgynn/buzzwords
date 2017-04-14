@@ -24,13 +24,16 @@ func main() {
 	// Generates a sentence of buzzwords "petabyte databases"
 	fmt.Println(buzzwords.BuzzWords())
 	
-	// Generates a sentence with a suffix, for example "petabyte databases as a service"
+	// Generates a sentence with a suffix, 
+	// for example "petabyte databases as a service"
 	fmt.Println(buzzwords.WithSuffix()) 
 
-	// Generates a sentence with a verb in front, for example "reticulating petabyte databases"
+	// Generates a sentence with a verb in front, 
+	// for example "reticulating petabyte databases"
 	fmt.Println(buzzwords.WithVerb())
 
-	// Generates a sentence with a verb in front and suffix, for example "reticulating petabyte databases as a service"
+	// Generates a sentence with a verb in front and suffix, 
+	// for example "reticulating petabyte databases as a service"
 	fmt.Println(buzzwords.WithVerbAndSuffix())
 }
 ```
