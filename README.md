@@ -4,6 +4,8 @@
 
 Go package to easily generate buzzwords, with the appropriate suffix. Can also be used to generate fake loading messages meaning almost nothing. Feel free to add more words if there's anything you're missing.
 
+This package is used as an example in [github.com/hajhatten/buzzwords-api](https://github.com/hajhatten/buzzwords-api)
+
 ## Install
 
 ```
